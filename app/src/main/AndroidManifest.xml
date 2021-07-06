@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseDatabase">
+        <activity android:name=".UpdateDeleteActivity"></activity>
+        <activity android:name=".ListActivity" />
+        <activity android:name=".CreateActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
