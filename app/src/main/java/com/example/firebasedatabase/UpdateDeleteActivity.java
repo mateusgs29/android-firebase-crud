@@ -73,6 +73,7 @@ public class UpdateDeleteActivity extends AppCompatActivity {
                     Toast.makeText(UpdateDeleteActivity.this, "Telefone não informado", Toast.LENGTH_SHORT).show();
                 } else {
                     People p = new People();
+                    p.setUid(peopleUId);
                     p.setName(editName.getText().toString());
                     p.setEmail(editEmail.getText().toString());
                     p.setPhone(editPhone.getText().toString());
