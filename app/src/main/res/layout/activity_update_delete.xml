@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/btn_edit"
-        android:layout_width="140dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="Atualizar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,15 +18,17 @@
 
     <Button
         android:id="@+id/btn_delete"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         android:backgroundTint="@color/red"
         android:text="Deletar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_edit" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_edit_cancel"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/edit_name"
@@ -41,24 +43,14 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <EditText
-        android:id="@+id/edit_cpf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/edit_name"
-        app:layout_constraintTop_toBottomOf="@+id/edit_name" />
-
-    <EditText
         android:id="@+id/edit_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/edit_cpf"
-        app:layout_constraintTop_toBottomOf="@+id/edit_cpf" />
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/edit_name"
+        app:layout_constraintTop_toBottomOf="@+id/edit_name" />
 
     <EditText
         android:id="@+id/edit_phone"
@@ -66,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         app:layout_constraintStart_toStartOf="@+id/edit_email"
         app:layout_constraintTop_toBottomOf="@+id/edit_email" />
 
@@ -78,15 +70,6 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/edit_name"
         app:layout_constraintStart_toStartOf="@+id/edit_name" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cpf"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/edit_cpf"
-        app:layout_constraintStart_toStartOf="@+id/edit_cpf" />
 
     <TextView
         android:id="@+id/textView21"
@@ -130,4 +113,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/btn_edit_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/grey"
+        android:text="Cancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_edit" />
 </androidx.constraintlayout.widget.ConstraintLayout>
